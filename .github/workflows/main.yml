@@ -1,0 +1,31 @@
+name: dev-django
+
+on:
+  pull_request:
+  push:
+    branches:
+      - maain
+      
+jobs:
+  build:
+    env:
+      PIPENV_NO_INHERIT: 1
+      PIPENV_IGNORE_VIRTUALENVS: 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configuração de Python 3.10
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install pipenv
+          pipenv sync --dev
+      - name: Lint with flake8
+        run: |
+#          pipenv run flake8 *.py
+      - name: Test with pytest
+        run: |
+#          pipenv run pytest . --cov=.
