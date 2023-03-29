@@ -29,7 +29,7 @@ jobs:
           pipenv run flake8 pypro
       - name: Test with pytest
         run: |
-          pipenv run pytest . --cov=.
+          pipenv run pytest pypro --cov=pypro
 
   deploy:
     name: Deploy app
