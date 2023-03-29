@@ -23,13 +23,15 @@ jobs:
         run: |
           pip install pipenv
           pipenv sync --dev
-          pipenv install flake8
+      - name: copy .env
+        run: |
+          cp contrib/.env-sample .env
       - name: Lint with flake8
         run: |
           pipenv run flake8 pypro
       - name: Test with pytest
         run: |
-          pipenv run pytest . --cov=.
+          pipenv run pytest pypro --cov=pypro
 
   deploy:
     name: Deploy app
