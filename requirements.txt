@@ -28,3 +28,4 @@ python-decouple==3.8
 setuptools==67.6.1 ; python_version >= '3.7'
 sqlparse==0.4.3 ; python_version >= '3.5'
 typing-extensions==4.5.0 ; python_version >= '3.7'
+whitenoise==6.4.0
