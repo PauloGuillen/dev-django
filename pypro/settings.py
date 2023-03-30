@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    'collectfast',
     "django.contrib.staticfiles",
     "pypro.base",
 ]
@@ -129,7 +130,12 @@ MEDIA_ROOT = os.path.join( BASE_DIR, 'mediafiles')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+COLLECTFAST_ENABLED = False
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# CSRF_TRUSTED_ORIGINS = ["https://pguillen-pypro.fly.dev"]
