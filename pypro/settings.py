@@ -139,4 +139,4 @@ COLLECTFAST_ENABLED = False
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# CSRF_TRUSTED_ORIGINS = ["https://pguillen-pypro.fly.dev"]
+CSRF_TRUSTED_ORIGINS = ["https://pguillen-pypro.fly.dev"]
