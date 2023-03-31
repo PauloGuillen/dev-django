@@ -148,9 +148,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CSRF_TRUSTED_ORIGINS = ["https://pguillen-pypro.fly.dev"]
 
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
-
 SENTRY_DNS = config('SENTRY_DNS', default=None)
 if SENTRY_DNS:
     sentry_sdk.init(
