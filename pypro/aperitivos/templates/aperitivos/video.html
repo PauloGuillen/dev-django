@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Python Pro</title>
+    <link rel="icon" type="image/png" href="{% static 'img/infinidade.png' %}" />
+
+    <meta name="description" content="Página do curso Python Pro">
+    <meta name="author" content="Paulo Guillen">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <h1>Video Aperitivo: Motivação</h1>
+
+
+          <div style="padding:181.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/815465526?h=fd84ff4e40&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VID-20230406-WA0008.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>          
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer mt-5 pt-4 text-light">
+      <dir class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Entre em contato</h3>
+            <address>
+              +55 12 997-411-854
+              <br>
+              <a href="mailto:ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
+            </address>
+          </div>
+        </div>
+      </dir>
+      <div class="rights pb-4">
+        <dir class="container">
+          <div class="row">
+            <div class="col">
+              {% now 'Y' %} Python Pro. Todos os direitos reservados.
+            </div>
+          </div>
+        </dir>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+</html>
