@@ -1,112 +1,37 @@
+{% extends 'base/base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Python Pro</title>
-    <link rel="icon" type="image/png" href="{% static 'img/infinidade.png' %}" />
+{% block title %}Python Pro - home{% endblock title %}
 
-    <meta name="description" content="Página do curso Python Pro">
-    <meta name="author" content="Paulo Guillen">
-
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  </head>
-
-
-  <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
-        </div>
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h2>
+          Curso de Python com Luciano Ramalho 
+        </h2>
       </div>
-    </nav>
-
-    <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="jumbotron">
-            <h2>
-              Curso de Python com Luciano Ramalho 
-            </h2>
-
-<!--
-            <h4 class="pt-4">Entre na lista de espera</h3>
-            <form class="row gy-2 gx-3 align-items-center validate". action="https://gmail.us13.list-manage.com/subscribe/post?u=0dc751f5b262a34f5a8e4c724&amp;id=b628bf823b&amp;f_id=000790e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-              <div class="col-auto">
-                <div class="input-group">
-                  <label class="sr-only" for="mce-EMAIL"></label>
-                  <input type="email" value="" name="EMAIL" class="form-control-required" id="mce-EMAIL" required placeholder="exemplo@email.com">
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="input-group">
-                  <label class="sr-only" for="mce-FNAME"></label>
-                  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Seu nome">
-                </div>
-              </div>
-              <div id="mce-responses" class="clear foot">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>    
-              <div class="col-auto">
-                <input type="submit" value="Salvar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
-              </div>
-            </form>
-          </div>
--->
-    
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <h5 class="card-header">
-                  Mais detalhes sobre o instrutor
-                </h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    <img src="{% static 'img/LucianoRamalho.jpeg' %}"  class="img-thumbnail float-left mr-3" alt="fotografia do Luciano Ramalho">
-                    Luciano Ramalho é programador Python desde 1998, Fellow da Python Software Foundation; 
-                    é sócio do Python.pro.br – uma empresa de treinamento – e cofundador do Garoa Hacker Clube,
-                     o primeiro hackerspace do Brasil. Tem liderado equipes de desenvolvimento de software e 
-                     ministrado cursos sobre Python em empresas de mídia, bancos e para o governo federal.
-                     Autor do livro <a href="https://pythonfluente.com/" target="_blank">Python Fluente</a>
-                  </p>
-                </div>
-              </div>
+          <div class="card">
+            <h5 class="card-header">
+              Mais detalhes sobre o instrutor
+            </h5>
+            <div class="card-body">
+              <p class="card-text">
+                <img src="{% static 'img/LucianoRamalho.jpeg' %}"  class="img-thumbnail float-left mr-3" alt="fotografia do Luciano Ramalho">
+                Luciano Ramalho é programador Python desde 1998, Fellow da Python Software Foundation; 
+                é sócio do Python.pro.br – uma empresa de treinamento – e cofundador do Garoa Hacker Clube,
+                 o primeiro hackerspace do Brasil. Tem liderado equipes de desenvolvimento de software e 
+                 ministrado cursos sobre Python em empresas de mídia, bancos e para o governo federal.
+                 Autor do livro <a href="https://pythonfluente.com/" target="_blank">Python Fluente</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <footer class="main-footer mt-5 pt-4 text-light">
-      <dir class="container">
-        <div class="row">
-          <div class="col">
-            <h3>Entre em contato</h3>
-            <address>
-              +55 12 997-411-854
-              <br>
-              <a href="mailto:ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
-            </address>
-          </div>
-        </div>
-      </dir>
-      <div class="rights pb-4">
-        <dir class="container">
-          <div class="row">
-            <div class="col">
-              {% now 'Y' %} Python Pro. Todos os direitos reservados.
-            </div>
-          </div>
-        </dir>
-      </div>
-    </footer>
-
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
-  </body>
-</html>
+  </div>
+</div>
+{% endblock body %}
