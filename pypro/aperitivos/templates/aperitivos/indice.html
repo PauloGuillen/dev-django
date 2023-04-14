@@ -14,7 +14,7 @@
         {% for video in videos %}
           <li><a href="{{ video.get_absolute_url }}"> {{ video.titulo | default:"Faltando titulo" }}</a></li>
         {% empty %}
-        <li>Não foi encontrado nenhum video de aperitivo</li>
+          <li>Não foi encontrado nenhum video de aperitivo</li>
         {% endfor %}
       </ol>
     </div>
