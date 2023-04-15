@@ -1,6 +1,6 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+from pypro.modulos import facede
 
 
 def home(request):
-    return render(request, 'base/home.html')
+    return render(request, 'base/home.html', {'MODULOS': facede.listar_modulos_ordenados()})

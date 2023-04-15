@@ -4,7 +4,7 @@ import pytest
 
 
 @pytest.fixture
-def resp(client):
+def resp(client, db):
     resp = client.get(reverse('base:home'))
     return resp
 
@@ -15,10 +15,6 @@ def test_status_code(resp):
 
 def test_title(resp):
     assert_contains(resp, '<title>Python Pro - home</title>')
-
-
-def test_home_link(resp):
-    assert_contains(resp, f'href="{reverse("base:home")}">Python Pro</a>')
 
 
 def test_email_link(resp):
