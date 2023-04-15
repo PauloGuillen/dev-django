@@ -10,6 +10,7 @@ def popular_slug(apps, scheme_editor):
         modulo.slug = slugify(modulo.titulo)
         modulo.save()
 
+
 class Migration(migrations.Migration):
     dependencies = [
         ("modulos", "0002_modulo_slug"),
