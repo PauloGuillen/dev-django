@@ -13,14 +13,13 @@ whitenoise = "*"
 collectfast = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
-codecov = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 pytest = "*"
 flake8 = "*"
 pytest-cov = "*"
 pytest-django = "*"
-codecov = "*"
 model-bakery = "*"
 
 [requires]
