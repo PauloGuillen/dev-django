@@ -1,6 +1,6 @@
 import pytest
 from model_bakery import baker
-from pypro.modulos import facede
+# from pypro.modulos import facede
 from pypro.modulos.models import Modulo
 
 
