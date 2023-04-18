@@ -27,12 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default="(cs&n+c#ck5!cb(l5__&6=(vvo9u)")
+SECRET_KEY = config('SECRET_KEY', cast=Csv(), default="(cs&n+c#ck5!cb(l5__&6=(vvo9u)")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), 
+                       default="postgres://postgres:1AZuwlCk3Bc1qZY@pguillen-pypro-db.flycast:5432")
 
 AUTH_USER_MODEL = 'base.User'
 
