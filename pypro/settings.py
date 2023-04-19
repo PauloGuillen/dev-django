@@ -27,12 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default="(cs&n+c#ck5!cb(l5__&6=(vvo9u)")
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='localhost,')
 
 AUTH_USER_MODEL = 'base.User'
 
@@ -94,10 +94,10 @@ if DEBUG:
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-defualt_db_url = 'sqlite:///' + os.path.join(BASE_DIR, "db.sqlite3")
+default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, "db.sqlite3")
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 DATABASES = {
-    "default": config('DATABASE_URL', defualt_db_url, cast=parse_database)
+    "default": config('DATABASE_URL', default_db_url, cast=parse_database)
 }
 
 
@@ -137,11 +137,10 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 COLLECTFAST_ENABLED = False
 
