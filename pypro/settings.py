@@ -150,6 +150,7 @@ COLLECTFAST_ENABLED = False
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=Csv())
 CSRF_TRUSTED_ORIGINS = ["https://pguillen-pypro.fly.dev"]
 
 SENTRY_DNS = config('SENTRY_DNS', default=None)
