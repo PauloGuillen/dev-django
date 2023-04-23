@@ -42,6 +42,10 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    "pypro.base",
+    "pypro.aperitivos",
+    "pypro.modulos",
+    "pypro.turmas",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -49,10 +53,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     'collectfast',
     "django.contrib.staticfiles",
-    "pypro.base",
-    "pypro.aperitivos",
-    "pypro.modulos",
-    "pypro.turmas",
     "ordered_model",
     "django_extensions",
 ]
@@ -174,3 +174,12 @@ if SENTRY_DNS:
         # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True
     )
+
+
+# Configurações de envio de e-mail
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
