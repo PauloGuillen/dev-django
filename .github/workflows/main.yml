@@ -18,9 +18,9 @@ jobs:
         image: postgres:15.2
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
-        ports: [ '5434:5434' ]
+          POSTGRES_PASSWORD: EqUmrPb4jRbGscd
+          POSTGRES_DB: pguillen-pypro-db.fly
+        ports: [ '5432:5434' ]
 
     steps:
       - uses: actions/checkout@v2
